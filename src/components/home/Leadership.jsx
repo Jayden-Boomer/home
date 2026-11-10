@@ -11,10 +11,10 @@ const Leadership = ({ heading, message, img, imageSize }) => {
     >
       <h2 className="display-4 pb-5 text-center">{heading}</h2>
       <div className="row">
-        <div className="col-md-5">
+        <div className={img.length ? "col-md-5" : "col-12 text-center"}>
           <p className="lead">{message}</p>
         </div>
-        <div className="col-md-7">
+        {img.length > 0 && <div className="col-md-7">
           <Carousel>
             {img.map((value, index) => {
               return (
@@ -36,7 +36,7 @@ const Leadership = ({ heading, message, img, imageSize }) => {
               );
             })}
           </Carousel>
-        </div>
+        </div>}
       </div>
     </Jumbotron>
   );

@@ -19,7 +19,7 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          {svn_url ? <CardButtons svn_url={svn_url} defaultBranch={value.default_branch} /> : <Skeleton count={2} />}
           <hr />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
@@ -37,14 +37,14 @@ const ProjectCard = ({ value }) => {
   );
 };
 
-const CardButtons = ({ svn_url }) => {
+const CardButtons = ({ svn_url, defaultBranch }) => {
   return (
     <div className="d-grid gap-2 d-md-block">
       <a
-        href={`${svn_url}/archive/master.zip`}
+        href={`${svn_url}/archive/refs/heads/${defaultBranch || "main"}.zip`}
         className="btn btn-outline-secondary mx-2"
       >
-        <i className="fab fa-github" /> Clone Project
+        <i className="fab fa-github" /> Download Code
       </a>
       <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
         <i className="fab fa-github" /> Repo

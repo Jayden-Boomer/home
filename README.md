@@ -1,3 +1,19 @@
+# Jayden Boomer ? Developer Portfolio
+
+Personalized with resume details and public repositories from [Jayden-Boomer](https://github.com/Jayden-Boomer).
+
+- Edit `src/editable-stuff/config.js` for biography, links, projects, leadership, and skills. Project cards use local descriptions and link directly to GitHub, so they remain visible without API access. Experience and education are also configured here.
+- Replace `src/editable-stuff/resume.pdf` to update the downloadable resume.
+- Edit `public/index.html` and `public/manifest.json` for browser metadata.
+- Deployment target: `https://Jayden-Boomer.github.io/home` (configured in `package.json`).
+- Use Node 22 and npm 10 as specified by the template. Run `npm ci`, then `npm start` to preview or `npm run build` to build. `npm run deploy` publishes to GitHub Pages.
+
+Skills are shown without numerical ratings. The original template social-preview image is no longer referenced; add your own screenshot and social image metadata when ready. The responsive sidebar, teal hero, and section cards are inspired by https://varadbhogayata.github.io. The active layout is in `src/App.js`, with styling in `src/scss/custom.scss`.
+
+Original template documentation and attribution follow.
+
+---
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">

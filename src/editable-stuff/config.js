@@ -1,155 +1,143 @@
-// Navigation Bar SECTION
+// Portfolio content from Jayden's resume and public GitHub profile.
+// Skills intentionally omit proficiency scores. reposLength: 0 avoids duplicate featured repos.
 const navBar = {
-  show: true,
+  "show": true
 };
 
-// Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
-  middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
-  icons: [
+  "gradientColors": "#172554, #1e40af, #2563eb, #1e3a8a",
+  "firstName": "Jayden",
+  "middleName": "",
+  "lastName": "Boomer",
+  "message": "Software Engineering | Embedded Systems | Web Development",
+  "introduction": "A curious developer who enjoys solving real-world problems and building connections between software and hardware.",
+  "icons": [
     {
-      image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      "image": "fa-github",
+      "url": "https://github.com/Jayden-Boomer"
     },
     {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
-    },
-  ],
+      "image": "fa-linkedin",
+      "url": "https://www.linkedin.com/in/jaydenboomer/"
+    }
+  ]
 };
-
-// ABOUT SECTION
-// If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
-//a) your Instagram username
-//      i.e:profilePictureLink:"johnDoe123",
-//b) a link to an hosted image
-//      i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
-//c) image in "editable-stuff" directory and use require("") to import here,
-//      i.e: profilePictureLink: require("../editable-stuff/hashirshoaeb.png"),
-//d) If you do not want any picture to be displayed, just leave it empty :)
-//      i.e: profilePictureLink: "",
-// For Resume either provide link to your resume or import from "editable-stuff" directory
-//     i.e resume: require("../editable-stuff/resume.pdf"),
-//         resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 
 const about = {
-  show: true,
-  heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
-  imageSize: 375,
-  message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  "show": true,
+  "heading": "About Me",
+  "imageLink": "https://avatars.githubusercontent.com/u/89496979?v=4",
+  "imageSize": 320,
+  "message": "I'm Jayden Boomer, a developer based in Richardson, Texas, with a background in Software Engineering at The University of Texas at Dallas. I enjoy building solutions that connect software and hardware, with interests in machine learning, robotics, embedded systems, and full-stack development. My projects range from healthcare chatbots and visual file organization to hands-on robotics software and electronics. Away from the keyboard, I enjoy piano, art, and hiking.",
+  "resume": `${process.env.PUBLIC_URL}/resume-embed/resumes/JaydenBoomerResume.pdf`
 };
 
-// PROJECTS SECTION
-// Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
-//      i.e: reposLength: 0,
-// If you want to display specfic projects, add the repository names,
-//      i.e ["repository-1", "repo-2"]
 const repos = {
-  show: true,
-  heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
-};
-
-// Leadership SECTION
-const leadership = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
-  images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
+  "show": true,
+  "heading": "Featured Projects",
+  "gitHubUsername": "Jayden-Boomer",
+  "reposLength": 0,
+  "specificRepos": [
+    "AxxesHackathon",
+    "CelestiFi",
+    "AsteroidsProject_CS1200",
+    "SE4352.001-TeamWebsite"
   ],
-  imageSize: {
-    width:"615",
-    height:"450"
+  "liveSites": {
+    "SE4352.001-TeamWebsite": "https://jayden-boomer.github.io/SE4352.001-TeamWebsite/"
+  },
+  "descriptions": {
+    "AxxesHackathon": "QuickCare: an AI chatbot prototype for health-related feedback, developed as programmer and team lead at the 24-hour Axxess healthcare innovation hackathon in February 2025.",
+    "CelestiFi": "A file organization project with visual clustering by size and relevance, developed as programmer and team lead at HackUTD: Ripple Effect in November 2024.",
+    "AsteroidsProject_CS1200": "An Asteroids project for CS1200.",
+    "SE4352.001-TeamWebsite": "Navi: a team project website presenting a voice-led indoor navigation concept for blind and low-vision users. Served as team lead; the site showcases prototypes, user journeys, and project documentation."
   }
 };
 
-// SKILLS SECTION
-const skills = {
-  show: true,
-  heading: "Skills",
-  hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
-  ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
-  ],
+const leadership = {
+  "show": true,
+  "heading": "Leadership & Robotics",
+  "message": "I've served as programmer and team lead at Axxess Hackathon and HackUTD, turning ideas into working prototypes in 24 hours. My robotics experience includes software and electronics work with VEXU's Comet Robotics, beginning in September 2024, and serving as Secretary and Lead Programmer for FIRST Robotics' Keller Fusion from August 2021 to May 2023. These experiences bring together the teamwork, problem-solving, and hands-on engineering I enjoy most.",
+  "images": [],
+  "imageSize": {
+    "width": "615",
+    "height": "450"
+  }
 };
 
-// GET IN TOUCH SECTION
+const skills = {
+  "show": true,
+  "heading": "Skills",
+  "hardSkills": [
+    {
+      "name": "Java"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "C#"
+    },
+    {
+      "name": "Python"
+    },
+    {
+      "name": "TypeScript / JavaScript"
+    },
+    {
+      "name": "HTML / CSS"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "Arduino UNO R3"
+    },
+    {
+      "name": "CAD / PTC Onshape"
+    },
+    {
+      "name": "Vue"
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Project Management"
+    },
+    {
+      "name": "Team Leadership"
+    },
+    {
+      "name": "Problem Solving"
+    },
+    {
+      "name": "Adaptability"
+    },
+    {
+      "name": "Time Management"
+    },
+    {
+      "name": "Patience & Empathy"
+    }
+  ]
+};
+
 const getInTouch = {
-  show: true,
-  heading: "Get In Touch",
-  message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+  "show": true,
+  "heading": "Let's Build Something",
+  "message": "Interested in collaborating or talking about software engineering, robotics, or embedded systems? Get in touch at",
+  "email": "jaboomer02@gmail.com"
 };
 
 const experiences = {
-  show: false,
-  heading: "Experiences",
+  show: true,
+  heading: "Experience",
   data: [
-    {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
-    },
+    {company: "Comet Robotics", role: "VEXU Programmer", icon: "robot", date: "September 2024 - Present | UT Dallas", bullets: ["Collaborate on software and electronics projects in a student-run robotics organization.", "Participate in weekly meetings focused on hands-on development and problem-solving."]},
+    {company: "Keller Fusion", role: "Secretary & Lead Programmer", icon: "cogs", date: "August 2021 - May 2023 | FIRST Robotics", bullets: ["Served as secretary and lead programmer for a FIRST Robotics team building competition robots."]},
+    {company: "Designer Shoe Warehouse", role: "Store Associate", icon: "store", date: "August 2025 - Present | Southlake, Texas", bullets: ["Help customers select products, process transactions, and navigate the loyalty program.", "Handle incoming freight, online orders, markdowns, and merchandise organization."]}
   ]
-}
+};
+const education = {school: "The University of Texas at Dallas", location: "Richardson, Texas", college: "Erik Jonsson School of Engineering and Computer Science", degree: "Bachelor of Science in Software Engineering", gpa: "3.539 / 4.000"};
 
-// Blog SECTION
-// const blog = {
-//   show: false,
-// };
-
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, leadership, skills, getInTouch, experiences, education };
